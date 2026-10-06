@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Main Hero */
+.hero-container {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image */
+.bg-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+    z-index: 10;
+}
+
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Hover */
+.nav-links a:hover {
+    color: #ddd;
+}
+
+
+/* Hire Me Button */
+#hire-me {
+    border: none;
+    outline: none;
+
+    padding: 12px 25px;
+
+    background: rgba(102, 100, 100, 0.664);
+    color: black;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .hero-container {
+        height: 550px;
+    }
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    #hire-me {
+        padding: 10px 20px;
+    }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .hero-container {
+        height: 500px;
+    }
+
+    .navbar {
+        padding: 15px;
+        gap: 20px;
+        /* background-color: #222; */
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        /* background-color: #222; */
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        /* background-color: #222; */
+    }
+
+    #hire-me {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+}
+
+.contant {
+    position: absolute;
+    top: 170px;
+    left: 50px;
+
+    z-index: 5;
+}
+
+.contant h1 {
+    color: rgb(245, 241, 241);
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+/* Second Heading */
+.contant-2 {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+
+    z-index: 5;
+}
+
+.contant-2 h1 {
+    color: rgb(56, 3, 3);
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+/* Third Content */
+.contant-3 {
+    position: absolute;
+    top: 330px;
+    left: 50px;
+
+    z-index: 5;
+}
+
+.contant-3 h1 {
+    color: white;
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+/* Paragraph */
+.paint {
+    width: 450px;
+
+    color: rgb(245, 240, 240);
+    font-size: 16px;
+    line-height: 1.6;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* Buttons */
+.btn,
+.btn-2 {
+    padding: 13px 25px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    margin-right: 10px;
+    border-radius: 10px;
+                        /* transition: 0.3s ease; */
+}
+
+
+/* First Button */
+.btn {
+    background: transparent;
+    color: rgb(252, 249, 249);
+    border: 1px solid rgb(7, 5, 5);
+    transition: 0.3s ease;
+}
+
+    .btn:hover {
+    background: #0e0b0b;
+    color: #fdf9f9;
+}
+
+
+/* Second Button */
+.btn-2 {
+    background: transparent;
+    color: rgb(240, 234, 234);
+    border: 1px solid rgb(10, 6, 6);
+                    transition: 0.3s ease;
+}
+
+    .btn-2:hover {
+    background: #0e0b0b;
+    color: #fdf9f9;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .contant {
+        top: 180px;
+        left: 20px;
+        /* background-color: #222; */
+    }
+
+    .contant h1 {
+        font-size: 50px;
+    }
+
+
+    .contant-2 {
+        top: 235px;
+        left: 20px;
+    }
+
+    .contant-2 h1 {
+        font-size: 50px;
+    }
+
+
+    .contant-3 {
+        top: 290px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .contant-3 h1 {
+        font-size: 50px;
+    }
+
+
+    .paint {
+        width: 100%;
+        max-width: 420px;
+
+        font-size: 14px;
+        line-height: 1.5;
+
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    .btn,
+    .btn-2 {
+        padding: 11px 18px;
+        font-size: 13px;
+        margin-bottom: 10px;
+
+    }
+
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .contant {
+        top: 160px;
+        left: 15px;
+        /* color: rgb(119, 15, 15); */
+    }
+
+    .contant h1 {
+        font-size: 42px;
+        color: rgb(148, 18, 18);
+    }
+
+
+    .contant-2 {
+        top: 210px;
+        left: 15px;
+    }
+
+    .contant-2 h1 {
+        font-size: 42px;
+    }
+
+
+    .contant-3 {
+        top: 260px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .contant-3 h1 {
+        font-size: 42px;
+    }
+
+
+    .paint {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+
+    .btn,
+    .btn-2 {
+        padding: 10px 15px;
+        font-size: 12px;
+
+    }
+}
+
+.container2 {
+    width: 100%;
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 30px 50px;
+
+    background: white;
+}
+
+
+/* Individual Stats */
+.container2 span {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    /* background-color: #666; */
+
+    color: #222;
+    /* background-color: #777; */
+}
+
+
+/* First Line Number */
+.container2 span::first-line {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px 15px;
+
+        padding: 30px 15px;
+    }
+
+    .container2 span {
+        font-size: 15px;
+    }
+
+    .container2 span::first-line {
+        font-size: 26px;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .container2 {
+        gap: 25px 10px;
+        padding: 25px 10px;
+    }
+
+    .container2 span {
+        font-size: 14px;
+    }
+
+    .container2 span::first-line {
+        font-size: 23px;
+    }
+}
+
+.img-container {
+    width: 100%;
+    padding: 80px 50px;
+    background: #f5f5f5;
+}
+
+
+/* Work Heading */
+#Work {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#Work p:first-child {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    color: #666;
+}
+
+#Work h3 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+#Work .oils {
+    max-width: 450px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* =========================
+   IMAGE GALLERY
+   ========================= */
+
+.image-gallery {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Image Box */
+.image-item {
+    width: 100%;
+    height: 350px;
+
+    overflow: hidden;
+}
+
+
+/* Images */
+.image-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Image Hover */
+.image-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .img-container {
+        padding: 60px 30px;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .image-item {
+        height: 300px;
+    }
+
+    #Work h3 {
+        font-size: 38px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .img-container {
+        padding: 50px 20px;
+    }
+
+    #Work {
+        margin-bottom: 30px;
+    }
+
+    #Work p:first-child {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    #Work h3 {
+        font-size: 32px;
+    }
+
+    #Work .oils {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+
+    /* 2 images per row */
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .image-item {
+        height: 220px;
+    }
+
+
+    /* Mobile par sirf 6 images */
+    .image-item:nth-child(n + 7) {
+        display: none;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .img-container {
+        padding: 40px 15px;
+    }
+
+    #Work h3 {
+        font-size: 28px;
+    }
+
+    #Work .oils {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .image-gallery {
+        gap: 10px;
+    }
+
+    .image-item {
+        height: 180px;
+    }
+}
+
+.container {
+    width: 100%;
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 80px 50px;
+
+    background: #ffffff;
+}
+
+
+/* About Image */
+.container > img {
+    width: 45%;
+    height: 600px;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Text Side */
+.text {
+    flex: 1;
+    max-width: 600px;
+}
+
+
+/* About */
+.About {
+    display: block;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+/* Main Heading */
+.Govind {
+    font-size: 48px;
+    font-weight: 500;
+
+    color: #222;
+
+    margin-bottom: 8px;
+}
+
+
+/* Painter */
+.Umrain {
+    font-size: 20px;
+    font-weight: 400;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* About Paragraph */
+.about {
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #555;
+
+    text-align: justify;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        gap: 40px;
+        padding: 60px 30px;
+    }
+
+    .container > img {
+        width: 42%;
+        height: 500px;
+    }
+
+    .Govind {
+        font-size: 40px;
+    }
+
+    .Umrain {
+        font-size: 18px;
+    }
+
+    .about {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 35px;
+
+        padding: 50px 20px;
+    }
+
+
+    /* Image ऊपर */
+    .container > img {
+        width: 100%;
+        height: 400px;
+
+        object-fit: cover;
+    }
+
+
+    /* Text नीचे */
+    .text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .About {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+
+    .Govind {
+        font-size: 34px;
+        margin-bottom: 6px;
+    }
+
+
+    .Umrain {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+
+    .about {
+        width: 100%;
+
+        font-size: 14px;
+        line-height: 1.7;
+
+        text-align: left;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 40px 15px;
+        gap: 25px;
+    }
+
+    .container > img {
+        height: 330px;
+    }
+
+    .Govind {
+        font-size: 30px;
+    }
+
+    .Umrain {
+        font-size: 16px;
+    }
+
+    .about {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+}
+
+.box-container {
+    width: 100%;
+    padding: 90px 50px;
+
+    background: #f5f5f5;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* Section Title */
+.service {
+    grid-column: 1 / -1;
+
+    margin: 0;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* Main Heading */
+.heading {
+    grid-column: 1 / -1;
+
+    max-width: 700px;
+
+    margin: 0 0 30px 0;
+
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* =========================
+   SERVICE BOX
+   ========================= */
+
+.box {
+    min-height: 250px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Box Heading */
+.box h2 {
+    margin: 0 0 20px 0;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* Empty Price */
+.price {
+    margin: 0;
+}
+
+
+/* Description */
+.descriptionn {
+    margin-top: auto;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* Hover */
+.box:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .box-container {
+        padding: 70px 30px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .box {
+        min-height: 230px;
+        padding: 25px;
+    }
+
+    .box h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .box-container {
+        width: 100%;
+
+        padding: 55px 20px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .service {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+
+    .heading {
+        font-size: 30px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .box {
+        width: 100%;
+        min-height: 220px;
+
+        padding: 25px 20px;
+    }
+
+
+    .box h2 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+
+    .descriptionn {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .box-container {
+        padding: 45px 15px;
+        gap: 12px;
+    }
+
+
+    .heading {
+        font-size: 27px;
+    }
+
+
+    .box {
+        min-height: 200px;
+        padding: 22px 18px;
+    }
+
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+
+    .descriptionn {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.work-container2 {
+    width: 100%;
+    padding: 90px 50px;
+    background: #ffffff;
+}
+
+
+/* Section Title */
+.work {
+    margin: 0 0 50px 0;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* Steps Container */
+.work-container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+}
+
+
+/* Individual Step */
+.work-item {
+    position: relative;
+
+    padding-right: 25px;
+}
+
+
+/* Number */
+.number {
+    margin: 0 0 25px 0;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #777;
+}
+
+
+/* Step Heading */
+.work-item h2 {
+    margin: 0 0 15px 0;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* Information */
+.inform {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .work-container2 {
+        padding: 70px 30px;
+    }
+
+    .work-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 25px;
+    }
+
+    .work-item {
+        padding-right: 10px;
+    }
+
+    .work-item h2 {
+        font-size: 22px;
+    }
+
+    .inform {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .work-container2 {
+        padding: 55px 20px;
+    }
+
+
+    .work {
+        margin-bottom: 35px;
+
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+
+    .work-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .work-item {
+        width: 100%;
+        padding-right: 0;
+    }
+
+
+    .number {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+
+    .work-item h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+
+    .inform {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .work-container2 {
+        padding: 45px 15px;
+    }
+
+    .work-container {
+        gap: 30px;
+    }
+
+    .work-item h2 {
+        font-size: 20px;
+    }
+
+    .inform {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   GET IN TOUCH / FORM
+   ========================= */
+
+.form-container {
+    width: 100%;
+    padding: 90px 50px;
+    background: #f5f5f5;
+}
+
+
+/* Small Heading */
+.form {
+    margin: 0 0 15px 0;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* Main Heading */
+.commission {
+    max-width: 750px;
+
+    margin: 0 0 15px 0;
+
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* Description */
+.fill {
+    max-width: 600px;
+
+    margin: 0 0 45px 0;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.form-container form {
+    width: 100%;
+    max-width: 750px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* Form Group */
+.form-group {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* Labels */
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #333;
+}
+
+
+/* Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ccc;
+    outline: none;
+
+    background: #fff;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    color: #333;
+
+    border-radius: 0;
+}
+
+
+/* Textarea */
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* Focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #555;
+}
+
+
+/* Submit Button */
+.submit-btn {
+    width: fit-content;
+
+    padding: 14px 30px;
+
+    border: 1px solid #222;
+
+    background: #222;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Button Hover */
+.submit-btn:hover {
+    background: #fff;
+    color: #222;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .form-container {
+        padding: 70px 30px;
+    }
+
+    .commission {
+        font-size: 40px;
+    }
+
+    .form-container form {
+        max-width: 650px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .form-container {
+        padding: 55px 20px;
+    }
+
+
+    .form {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .commission {
+        font-size: 32px;
+        line-height: 1.2;
+
+        margin-bottom: 15px;
+    }
+
+
+    .fill {
+        font-size: 14px;
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+    }
+
+
+    .form-container form {
+        width: 100%;
+        gap: 20px;
+    }
+
+
+    .form-group {
+        gap: 7px;
+    }
+
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+
+        padding: 13px;
+
+        font-size: 14px;
+    }
+
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+
+    .submit-btn {
+        width: 100%;
+
+        padding: 13px 20px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .form-container {
+        padding: 45px 15px;
+    }
+
+
+    .commission {
+        font-size: 28px;
+    }
+
+
+    .fill {
+        font-size: 13px;
+    }
+
+
+    .form-container form {
+        gap: 18px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    width: 100%;
+
+    padding: 35px 50px;
+
+    background: #222;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+.footer {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* Contact */
+.contect {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    footer {
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 21px;
+    }
+
+    .contect {
+        font-size: 14px;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    .footer {
+        font-size: 20px;
+    }
+
+    .contect {
+        font-size: 13px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+    </style>
+</head>
+<script src="script.js"></script>
+<body>
+     <div class=" hero-container">
+        <div class="bg-img">
+            <img src="top-view-attractive-woman-hands-drawing-amazing-picture-canvas-modern-cozy-art-workshop.jpg" alt="">
+
+            <nav class="navbar">
+                <div class="logo">Govind Arts</div>
+
+                <ul class="nav-links">
+                    <li><a href="#Work">WORK</a></li>
+                    <li><a href="#About">ABOUT</a></li>
+                    <li><a href="#Service">SERVICE</a></li>
+                    <li><a href="#get-in-Touch">CONTACT</a></li>
+                </ul>
+                <button id="hire-me" onclick="location.href='#get-in-Touch' "">HIRE ME</button>
+
+            </nav>
+
+        </div>
+
+    </div>
+    <div class="contant">
+        <h1>Paintings</h1>
+        <!-- <h1>that live</h1>
+        <h1>with you</h1> -->
+    </div>
+
+    <div class="contant-2">
+        <h1>that live</h1>
+    </div>
+    <div class="contant-3">
+
+        <h1>with you</h1>
+
+        <p class="paint">I paint commissioned portrait,landscapes,and abstract
+            works that carry weight-images you return to
+        </p>
+
+        <button class="btn" onclick="location.href='#Work'">View Work</button>
+        <button class="btn-2" onclick="location.href='#get-in-Touch'">Commission a peice</button>
+    </div>
+
+    <div class="container2">
+        <span>120 +
+            <br> Pieces
+        </span>
+
+        <span>25 +
+            <br> Years painting
+        </span>
+
+        <span>80 +
+            <br> Happy client
+        </span>
+
+        <span>4
+            <br> city Exhibition
+
+        </span>
+    </div>
+
+    <div class="img-container">
+        <section id="Work">
+            <p>Selected Work</p>
+
+            <h3>Recent Paintings</h3>
+            <p class="oils">Original oils,acrylics,and
+                mixed media-each one a single edition
+            </p>
+        </section>
+
+
+
+        <div class="image-gallery">
+            <div class="image-item">
+
+                <img src="WhatsApp Image 2026-09-24 at 10.00.56 PM.jpeg" alt="">
+            </div>
+
+            <div class="image-item">
+                <img src="WhatsApp Image 2026-09-24 at 10.03.05 PM.jpeg" alt="">
+            </div>
+            <div class="image-item">
+                <img src="WhatsApp Image 2026-09-24 at 10.13.32 PM.jpeg" alt="">
+            </div>
+            <div class="image-item">
+                <img src="WhatsApp Image 2026-09-24 at 10.12.15 PM.jpeg" alt="">
+            </div>
+            <div class="image-item">
+                <img src="WhatsApp Image 2026-09-24 at 10.11.01 PM.jpeg" alt="">
+            </div>
+            <div class="image-item">
+                <img src="WhatsApp Image 2026-09-24 at 10.22.58 PM.jpeg" alt="">
+            </div>
+            <div class="image-item">
+                <img src="whatsApp Image 2026-09-24 at 10.48.01 PM.jpeg" alt="">
+            </div>
+            <div class="image-item">
+
+                <img src="WhatsApp Image 2026-09-24 at 10.48.01 PM.jpeg" alt="">
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <!-- यहाँ अपनी इमेज का लिंक डालें -->
+        <img src="WhatsApp Image 2026-09-24 at 10.22.58 PM.jpeg" alt="">
+
+        <!-- हेडिंग और टेक्स्ट वाला हिस्सा -->
+        <div class="text">
+            <span id="About" class="About">About</span>
+
+            <h2 class="Govind">Govind Arts
+
+            </h2>
+            <h3 class="Umrain">painter , Umrain.</h3>
+            <p class="about">For me, art is not simply a medium of colours and brushes; it is a way of transforming
+                imagination, experience, and emotions into something beautiful. My journey in art began in a rural
+                environment through painting and decorative work. Over time, my experience grew through creating
+                different kinds of artwork and experimenting with colours, which gradually helped shape my own artistic
+                identity.
+
+                I have experience and a strong interest in creating a wide variety of paintings. From capturing facial
+                expressions and fine details in portrait art to bringing nature, atmosphere, and colours to life in
+                landscapes, I enjoy working across different artistic styles. I also create realistic artwork and canvas
+                paintings, along with traditional paintings and decorative artwork.
+
+                My experience ranges from painting tractors, trolleys, and other vehicles in rural areas to creating
+                artwork in government schools and transforming walls with colours and creative designs. Working in
+                different environments and with different requirements has taught me not only how to work with colours
+                and brushes, but also how to turn an idea into art, even with limited resources.
+
+                I always strive to bring balance, detail, and a natural feel to every painting I create. I do not see
+                each artwork as just a picture; I see it as a reflection of my time, effort, creativity, and personal
+                expression.
+
+                Whether it is a portrait, a landscape, a realistic artwork, or a painting created on canvas, I see every
+                piece as a new challenge and an opportunity to express my creativity in a meaningful way. My aim is to
+                create artworks that are not only beautiful to look at, but also leave the viewer with a feeling and a
+                lasting impression.</p>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <p class="service" id="Service">Service & Commissions</p>
+        <h2 class="heading">Work with me — let's make something lasting.</h2>
+        <div class="box">
+            <h2>Portrait </h2>
+            <p class="price"></p>
+            <p class="descriptionn">
+                A deeply personal portrait — from a single person to a full family sitting. Painted from life or
+                high-quality reference photos.
+            </p>
+        </div>
+        <div class="box">
+            <h2>Landscape / Cityscape
+            </h2>
+            <p class="price"></p>
+            <p class="descriptionn">
+                Your favourite place immortalised in paint. Any location — local streets, mountain vistas, coastal
+                light.
+
+
+            </p>
+        </div>
+        <div class="box">
+            <h2>Canvas Painting</h2>
+            <p class="price"></p>
+            <p class="descriptionn">
+                Art brought to life on canvas, where colours turn ideas and emotions into timeless artwork.
+
+            </p>
+        </div>
+        <div class="box">
+            <h2>Abstract Piece</h2>
+            <p class="price"></p>
+            <p class="descriptionn">
+                Mood-driven abstract works in oil or acrylic, colour-matched to your space or an emotional brief you
+                share.
+
+
+            </p>
+        </div>
+        <div class="box">
+            <h2>Realistic Art</h2>
+            <p class="price"></p>
+            <p class="descriptionn">
+                Art that captures every detail with lifelike precision, bringing people, places, and moments beautifully
+                to life.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Family Art</h2>
+            <p class="price"></p>
+            <p class="descriptionn">
+                A beautiful way to capture the love, memories, and special bond of a family in timeless artwork.
+            </p>
+        </div>
+
+
+    </div>
+
+    <div class="work-container2">
+
+        <p class="work">How it work</p>
+        <div class="work-container">
+            <div class="work-item">
+
+                <p class="number">01</p>
+                <h2>Send a brief</h2>
+                <p class="inform">
+                    Tell me what you have in mind — size, subject, mood, where it'll live.
+                </p>
+            </div>
+            <div class="work-item">
+
+                <p class="number">02</p>
+                <h2>Get a quote</h2>
+                <p class="inform">
+                    I'll send a proposal within 48 hours with pricing and timeline.
+                </p>
+            </div>
+            <div class="work-item">
+
+                <p class="number">03</p>
+                <h2>Watch it grow</h2>
+                <p class="inform">
+                    I share progress photos at key stages so you're never in the dark.
+                </p>
+            </div>
+            <div class="work-item">
+
+                <p class="number">04</p>
+                <h2>Yours to keep</h2>
+                <p class="inform">
+                    Delivered carefully packed, with a certificate of authenticity.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="form-container">
+        <p class="form" id="get-in-Touch">Get in Touch</p>
+        <h1 class="commission">
+            Ready To commission a peice ?
+        </h1>
+
+        <p class="fill">Fill out the form below and i'll reply within 48 hours with a quote and availvility.</p>
+        <!-- <div class="form-container3"> -->
+
+
+        <form action="/submit" method="POST">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Gmail / Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <!-- Option Dropdown -->
+            <div class="form-group">
+                <label for="options">Choose an Option</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select an Service</option>
+                    <option value="Wall painting">Wall painting</option>
+                    <option value="Chitrkari">Chitrkari</option>
+                    <option value="Trali putai">Trali putai / Likhai</option>
+                    <option value="Threshar putai">Threshar putai / Likhai</option>
+                    <option value="Pickup putai">Pickup putai / Likhai</option>
+                    <option value="Tank putai">Tank putai / Likhai</option>
+                    <option value="Bus putai">Bus putai / Likhai</option>
+                    <option value="Canvas per oil painting">Canvas per oil painting</option>
+                    <option value="Portrait">Portrait</option>
+                    <option value="Oil portrait painting">Oil portrait painting</option>
+                    <option value="Photo Realstic art">Photo Realstic art</option>
+                    <option value="Photo Realstic art">Landscape / painting</option>
+                    <option value="Photo Realstic art">Redium work</option>
+                </select>
+            </div>
+
+            <!-- Comment Field -->
+            <div class="form-group">
+                <label for="comment">Comment / Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your comment here..."
+                    required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Requirment</button>
+        </form>
+    </div>
+
+    <footer>
+        <p class="footer"> Govind Arts</p>
+        <p class="contect"> Mobile: +91
+            9027416889
+        </p>
+
+    </footer>
+
+</body>
+</html>
