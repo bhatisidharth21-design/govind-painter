@@ -12,7 +12,9 @@ const transporter = nodemailer.createTransport({
 });
 
 const app = express();
-const PORT = 3000;
+// const PORT = 3000;
+
+const PORT = process.env.PORT || 3000;
 
 // const websitePath = path.join(__dirname, ".." "Govind");
 const websitePath = path.join(__dirname, "..", "Govind painter");
