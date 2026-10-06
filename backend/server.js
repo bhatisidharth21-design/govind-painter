@@ -1,18 +1,9 @@
 const express = require("express");
 const path = require("path");
 require("dotenv").config();
-const nodemailer = require("nodemailer");
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    family: 4,
-    secure: false,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-});
+
+
 
 const app = express();
 // const PORT = 3000;
@@ -47,12 +38,18 @@ app.post("/submit", async (req, res) => {
     console.log("Message:", message);
 
     try {
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+    const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            from: "onboarding@resend.dev",
             to: process.env.EMAIL_USER,
             subject: "New Client Requirement - Govind Painter",
+            reply_to: email,
             text: `
-            replyTo: email,
 New Client Requirement
 
 Name: ${name}
@@ -62,7 +59,14 @@ Service: ${service}
 Message:
 ${message}
             `
-        });
+        })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.message || "Email send failed");
+    }
 
 
         res.send("Your requirement has been submitted successfully!");
