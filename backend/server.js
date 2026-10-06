@@ -64,9 +64,9 @@ ${message}
 
         res.send("Your requirement has been submitted successfully!");
     } catch (error) {
-        console.error("Email Error:", error);
-        res.status(500).send("Message send nahi ho paya.");
-    }
+    console.error("Email Error:", error);
+    res.status(500).send("Email Error: " + error.message);
+}
 });
 
 app.listen(PORT,() => {
