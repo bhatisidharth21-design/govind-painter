@@ -4,17 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhatisidharth21-design/govind-painter.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bhatisidharth21-design/govind-painter/issues"
+  },
+  "homepage": "https://github.com/bhatisidharth21-design/govind-painter#readme",
   "dependencies": {
-    "dotenv": "^18.0.5",
-    "express": "^5.2.1",
-    "nodemailer": "^10.0.15"
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "nodemailer": "^10.2.0"
   }
 }
